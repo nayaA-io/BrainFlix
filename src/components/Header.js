@@ -52,36 +52,4 @@ function Navbar() {
   );
 }
 
-// function FileUpload() {
-//   const [selectedFile, setSelectedFile] = useState(null);
-
-//   const handleFileChange = (event) => {
-//     setSelectedFile(event.target.files[0]);
-//   };
-
-//   const handleSubmit = (event) => {
-//     event.preventDefault();
-//     // You can perform file upload logic here
-//     if (selectedFile) {
-//       console.log("Selected file:", selectedFile);
-//     } else {
-//       console.log("No file selected");
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <form onSubmit={handleSubmit}>
-//         <input
-//           type="file"
-//           onChange={handleFileChange}
-//           accept=".jpg, .jpeg, .png, .gif, .svg, .pdf" // Specify accepted file types
-//         />
-//       </form>
-//     </div>
-//   );
-// }
-
-//export { Navbar };
 export default Navbar;
-// export default FileUpload;

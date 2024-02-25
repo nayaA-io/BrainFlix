@@ -1,26 +1,36 @@
 import "./App.css";
-import Navbar from "./components/Header.js";
-import videos from "./data/videos.json";
-//import VideoDetails from "./components/VideoDetails.js";
 
+import React, { useState, useEffect } from "react";
+import Navbar from "./components/Header.js";
+import MainVideo from "./components/MainVideo.js";
+import VideoDetails from "./components/VideoDetails.js";
+//import Form from "./Form";
+//import Comments from "./Comments";
+import SideVideo from "./components/SideVideo.js";
+import mainVideoData from "./data/video-details.json";
+import sideVideoData from "./data/videos.json";
 function App() {
+  const [mainVideo, setMainVideo] = useState({});
+  const [sideVideos, setSideVideos] = useState([]);
+
+  useEffect(() => {
+    setMainVideo(mainVideoData);
+
+    setSideVideos(sideVideoData);
+  }, []);
+
   return (
     <>
       <Navbar />
-
-      <section className="video__container">
-        {/* <VideoDetails video={video} /> */}
+      <MainVideo mainVideo={mainVideo} />
+      <section className="video__details-container">
         <div>
-          {videos.map((video) => (
-            <div key={video.id} className="video__container">
-              <video controls poster={video.image} className="video-thumbnail">
-                Your browser does not support the video tag.
-              </video>
-
-              <h2>{video.title}</h2>
-              <p>{video.channel}</p>
-            </div>
-          ))}
+          <VideoDetails mainVideo={mainVideo} />
+          {/* <Form />
+          <Comments mainVideo={mainVideo} /> */}
+        </div>
+        <div>
+          <SideVideo sideVideos={sideVideos} />
         </div>
       </section>
     </>
