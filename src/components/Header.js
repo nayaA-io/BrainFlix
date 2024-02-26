@@ -1,7 +1,6 @@
 import brainFlixLogo from "../assets/images/logo/brainFlix-logo.svg";
 import { useRef } from "react";
 import userAvatar from "../assets/images/mohan-muruge.jpg";
-// import React, { useState } from "react";
 
 function Navbar() {
   const FileUpload = useRef(null);

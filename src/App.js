@@ -1,23 +1,19 @@
 import "./App.css";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Header.js";
 import MainVideo from "./components/MainVideo.js";
 import VideoDetails from "./components/VideoDetails.js";
-//import Form from "./Form";
-//import Comments from "./Comments";
+
 import SideVideo from "./components/SideVideo.js";
 import mainVideoData from "./data/video-details.json";
 import sideVideoData from "./data/videos.json";
 function App() {
-  const [mainVideo, setMainVideo] = useState({});
-  const [sideVideos, setSideVideos] = useState([]);
+  const [mainVideo, setMainVideo] = useState(mainVideoData[0]);
 
-  useEffect(() => {
-    setMainVideo(mainVideoData);
-
-    setSideVideos(sideVideoData);
-  }, []);
+  const handleVideoSelection = (video) => {
+    setMainVideo(video);
+  };
 
   return (
     <>
@@ -26,11 +22,12 @@ function App() {
       <section className="video__details-container">
         <div>
           <VideoDetails mainVideo={mainVideo} />
-          {/* <Form />
-          <Comments mainVideo={mainVideo} /> */}
         </div>
         <div>
-          <SideVideo sideVideos={sideVideos} />
+          <SideVideo
+            sideVideos={sideVideoData}
+            handleVideoSelection={handleVideoSelection}
+          />
         </div>
       </section>
     </>
