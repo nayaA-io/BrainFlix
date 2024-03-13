@@ -70,7 +70,7 @@ body {
   justify-content: space-between;
 }
 
-/* ************************************************************ */
+/* ************************* SIDE VIDEO*********************************** */
 
 .sidevideo__content {
   display: flex;
@@ -122,3 +122,28 @@ body {
 }
 
 } */
+/* ********************** UPLOAD PAGE ******************************** */
+.upload__container {
+  margin: 0 120px;
+}
+.upload__form {
+  display: flex;
+  flex-direction: column;
+}
+.upload__content {
+  display: flex;
+  gap: 20px;
+}
+.upload__thumbnail {
+  width: 20%;
+}
+
+.upload__action {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.upload__tittle-input {
+  padding: 15px 60px;
+}
