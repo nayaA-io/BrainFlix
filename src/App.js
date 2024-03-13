@@ -1,36 +1,42 @@
 import "./App.css";
 
-import React, { useState, useEffect } from "react";
-import Navbar from "./components/Header.js";
-import MainVideo from "./components/MainVideo.js";
-import VideoDetails from "./components/VideoDetails.js";
-//import Form from "./Form";
-//import Comments from "./Comments";
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components//Header/Header.js";
+import MainVideo from "./components/MainVideo/MainVideo.js";
+import VideoDetails from "./components/VideoDetails/VideoDetails.js";
 import SideVideo from "./components/SideVideo.js";
+import Upload from "./pages/UPloadPage/Upload.js";
 import mainVideoData from "./data/video-details.json";
 import sideVideoData from "./data/videos.json";
 function App() {
-  const [mainVideo, setMainVideo] = useState({});
-  const [sideVideos, setSideVideos] = useState([]);
+  const [mainVideo, setMainVideo] = useState(mainVideoData[0]);
 
-  useEffect(() => {
-    setMainVideo(mainVideoData);
-
-    setSideVideos(sideVideoData);
-  }, []);
+  const handleVideoSelection = (video) => {
+    setMainVideo(video);
+  };
 
   return (
     <>
-      <Navbar />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          {/* <Route path="/" element={<HomePage />} /> */}
+          <Route path="/upload" Component={Upload} />
+          {/* <Route path="/video/:videoId" element={<VideoDetailsPage />} /> */}
+        </Routes>
+      </BrowserRouter>
+
       <MainVideo mainVideo={mainVideo} />
       <section className="video__details-container">
         <div>
           <VideoDetails mainVideo={mainVideo} />
-          {/* <Form />
-          <Comments mainVideo={mainVideo} /> */}
         </div>
         <div>
-          <SideVideo sideVideos={sideVideos} />
+          <SideVideo
+            sideVideos={sideVideoData}
+            handleVideoSelection={handleVideoSelection}
+          />
         </div>
       </section>
     </>

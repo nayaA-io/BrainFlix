@@ -1,14 +1,17 @@
-import videos from "../data/videos.json";
-
-function SideVideo() {
+function SideVideo({ sideVideos, handleVideoSelection }) {
   return (
     <section className="sidevideo__container">
       <div>
-        {videos.map((video) => (
-          <div key={video.id} className="sidevideo__content">
+        {sideVideos.map((video) => (
+          <div
+            key={video.id}
+            className="sidevideo__content"
+            onClick={() => handleVideoSelection(video)}
+          >
             <video poster={video.image} className="sidevideo-thumbnail">
+              <source src={video.video} type="video/mp4" />
               Your browser does not support the video tag.
-            </video>{" "}
+            </video>
             <div className="Sidechannel__details">
               <h2>{video.title}</h2>
               <p>{video.channel}</p>
