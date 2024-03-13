@@ -29,9 +29,7 @@ function Navbar() {
           {/*  */}
 
           <div className="header__upload-button">
-            <Link target="_blank" to="/upload">
-              Upload
-            </Link>
+            <Link to="/upload">Upload</Link>
             {/* <Routes>
               <Route
                 path="/src/pages/UPloadPage/Upload.js"
