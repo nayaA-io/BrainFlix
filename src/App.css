@@ -147,3 +147,7 @@ body {
 .upload__tittle-input {
   padding: 15px 60px;
 }
+
+.upload__link {
+  text-decoration: none;
+}

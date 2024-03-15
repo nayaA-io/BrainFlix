@@ -1,6 +1,4 @@
 import React from "react";
-//import mainVideoData from "../data/video-details.json";
-//import VideoDetails from "./VideoDetails";
 
 function MainVideo({ mainVideo }) {
   //   const videoData = mainVideoData[0];
