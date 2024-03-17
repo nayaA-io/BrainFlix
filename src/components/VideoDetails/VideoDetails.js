@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import CommentForm from "../Forms/Form";
 
 const baseUrl = "https://project-2-api.herokuapp.com/";
 const apiKey = "7f3aa449-5d3a-4790-8243-c7f8b9210d55";
@@ -40,6 +41,7 @@ const VideoDetails = ({ videoId }) => {
       </div>
       <h3>Comments:</h3>
       <ul>
+        <CommentForm />
         {comments.map((comment) => (
           <li key={comment.id}>
             <strong>{comment.name}:</strong> {comment.comment}
