@@ -1,3 +1,6 @@
+import React from "react";
+import "./sidevideo.css"; // Import the external CSS file
+
 function SideVideo({ sideVideos, handleVideoSelection }) {
   return (
     <section className="sidevideo__container">

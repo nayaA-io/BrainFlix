@@ -1,0 +1,39 @@
+.sidevideo__container {
+  padding: 20px;
+  /* border-left: 1px solid red;
+    height: 500px; */
+}
+
+.sidevideo__content {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 20px; */
+  /* border-radius: 35px; */
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.sidevideo__content:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+}
+
+.sidevideo-thumbnail {
+  /* width: 100px; */
+  height: 90px;
+  margin-right: 15px;
+}
+
+.Sidechannel__details {
+  flex: 1;
+}
+
+.Sidechannel__details h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.Sidechannel__details p {
+  font-size: 14px;
+  color: #666;
+}
