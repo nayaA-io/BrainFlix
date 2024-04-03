@@ -64,21 +64,8 @@ body {
 /* .main-video__player {
   max-width: 1000px;
 } */
-.video__details-container {
-  margin: 20px 98px;
-  display: flex;
-  justify-content: space-between;
-}
 
 /* ************************* SIDE VIDEO*********************************** */
-
-.sidevideo__content {
-  display: flex;
-}
-.sidevideo-thumbnail {
-  max-width: 200px;
-  border-radius: 3px;
-}
 
 /* ********************************************************** */
 

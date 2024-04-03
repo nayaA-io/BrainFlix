@@ -1,3 +1,20 @@
+.comments__form-title {
+  margin: 0 0 0 65px;
+  font-size: 14px;
+}
+
 .comments__form {
   display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.Header_user-avatar {
+  margin-right: 15px;
+}
+
+.User__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }

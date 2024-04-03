@@ -13,21 +13,23 @@ function CommentForm({ comments }) {
   };
   return (
     <>
-      <h3 className="comments__form-title">Join the conversation</h3>
+      <p className="comments__form-title">Join the conversation</p>
       <form className="comments__form" onSubmit={handleSubmit}>
         <div className="Header_user-avatar">
           <img className="User__avatar" src={userAvatar} alt="User Avatar" />
         </div>
 
-        <input
-          className="comments__input"
+        {/* <div className="input__area"> */}
+        <textarea
+          className="comment__Input"
           placeholder="Add a new comment"
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
-        />
-        <button className="comments__submit" type="submit">
-          Add Comment
-        </button>
+          required
+        ></textarea>
+
+        <button className="comment__submit button">➕COMMENT</button>
+        {/* </div> */}
       </form>
     </>
   );
