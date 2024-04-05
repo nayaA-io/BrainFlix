@@ -13,12 +13,9 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          {/* <Route path="/" element={<HomePage />} /> */}
           <Route index path="/" Component={Home} />
-          {/* <Route index path="/video/:id" Component={Home} /> */}
 
           <Route path="/upload" element={<Upload />} />
-          {/* <Route path="/" element={<VideoDetails />} /> */}
 
           <Route path="/video/:videoId" element={<VideoDetails />} />
         </Routes>

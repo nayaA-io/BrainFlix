@@ -4,8 +4,8 @@ import CommentForm from "../Forms/Form";
 import "../../pages/UploadPage/Home.css";
 import userAvatar from "../../assets/images/mohan-muruge.jpg";
 
-const baseUrl = "https://project-2-api.herokuapp.com/";
-const apiKey = "7f3aa449-5d3a-4790-8243-c7f8b9210d55";
+// const baseUrl = "https://project-2-api.herokuapp.com/";
+// const apiKey = "7f3aa449-5d3a-4790-8243-c7f8b9210d55";
 
 const VideoDetails = ({ videoId }) => {
   const [videoDetails, setVideoDetails] = useState(null);
@@ -13,9 +13,7 @@ const VideoDetails = ({ videoId }) => {
   useEffect(() => {
     const fetchVideoDetails = async () => {
       try {
-        const response = await axios.get(
-          `${baseUrl}videos/${videoId}/?api_key=${apiKey}`
-        );
+        const response = await axios.get("http://localhost:8082/videos");
         setVideoDetails(response.data);
       } catch (error) {
         console.error("Error fetching video details:", error);
