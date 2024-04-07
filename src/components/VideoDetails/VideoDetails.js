@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+//import React, { useState } from "react";
+// import axios from "axios";
 import CommentForm from "../Forms/Form";
 import "../../pages/UploadPage/Home.css";
 import userAvatar from "../../assets/images/mohan-muruge.jpg";
@@ -7,25 +7,26 @@ import userAvatar from "../../assets/images/mohan-muruge.jpg";
 // const baseUrl = "https://project-2-api.herokuapp.com/";
 // const apiKey = "7f3aa449-5d3a-4790-8243-c7f8b9210d55";
 
-const VideoDetails = ({ videoId }) => {
-  const [videoDetails, setVideoDetails] = useState(null);
+const VideoDetails = ({ mainVideo }) => {
+  console.log(mainVideo);
+  // const [videoDetails, setVideoDetails] = useState(null);
 
-  useEffect(() => {
-    const fetchVideoDetails = async () => {
-      try {
-        const response = await axios.get("http://localhost:8082/videos");
-        setVideoDetails(response.data);
-      } catch (error) {
-        console.error("Error fetching video details:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchVideoDetails = async () => {
+  //     try {
+  //       const response = await axios.get("http://localhost:8082/videos");
+  //       setVideoDetails(response.data);
+  //     } catch (error) {
+  //       console.error("Error fetching video details:", error);
+  //     }
+  //   };
 
-    if (videoId) {
-      fetchVideoDetails();
-    }
-  }, [videoId]);
+  //   if (videoList) {
+  //     fetchVideoDetails();
+  //   }
+  // }, [videoId]);
 
-  if (!videoDetails) {
+  if (!mainVideo) {
     return null;
   }
 
@@ -36,7 +37,8 @@ const VideoDetails = ({ videoId }) => {
     likes,
     description,
     comments = [],
-  } = videoDetails;
+  } = mainVideo;
+  console.log(title);
 
   return (
     <div className="channel">
@@ -56,11 +58,12 @@ const VideoDetails = ({ videoId }) => {
         {comments.map((comment) => (
           <li key={comment.id} className="channel__comment">
             <div className="Header_user-avatar">
-              <img
-                className="comment__avatar"
+              <div className="comment__avatar"></div>
+              {/* <img
+               
                 src={userAvatar}
                 alt="User Avatar"
-              />
+              /> */}
             </div>
 
             <div className="comment__user-info">

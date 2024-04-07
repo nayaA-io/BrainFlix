@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import userAvatar from "../../assets/images/mohan-muruge.jpg";
 import "../Forms/Form.css";
+import addComment from "../../assets/images/Icons/add_comment.svg";
+
 function CommentForm({ comments }) {
   const [newComment, setNewComment] = useState("");
 
@@ -28,7 +30,7 @@ function CommentForm({ comments }) {
           required
         ></textarea>
 
-        <button className="comment__submit button">➕COMMENT</button>
+        <button className="comment__submit button">COMMENT</button>
         {/* </div> */}
       </form>
     </>
