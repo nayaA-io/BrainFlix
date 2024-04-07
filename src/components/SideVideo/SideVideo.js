@@ -1,5 +1,5 @@
 import React from "react";
-import "./sidevideo.css";
+import "./sidevideo.scss";
 import { Link } from "react-router-dom"; // Import the external CSS file
 
 function SideVideo({ sideVideos, handleVideoSelection }) {
@@ -30,11 +30,3 @@ function SideVideo({ sideVideos, handleVideoSelection }) {
 }
 
 export default SideVideo;
-
-// <div
-//
-//   className="sidevideo__content"
-//   onClick={() => handleVideoSelection(video)}
-// >
-
-/* </div> */
