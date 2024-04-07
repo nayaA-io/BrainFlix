@@ -1,5 +1,6 @@
 .sidevideo__container {
   padding: 20px 20px 10px 20px;
+
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -16,14 +17,14 @@
 .sidevideo__container video {
   width: 50%;
   border-radius: 5px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .sidevideo__content {
   cursor: pointer;
   display: flex;
   align-items: center;
+
   overflow: hidden;
   transition: background-color 0.3s ease;
 }
@@ -54,54 +55,69 @@
 }
 
 /* TABLET */
+
 @media (max-width: 1024px) {
   .sidevideo__container {
     padding: 15px 15px 5px 15px;
   }
+
   .sidevideos__container {
     width: calc(98% - 30px);
   }
+
   .sidevideo__container video {
     width: 40%;
     height: 80px;
   }
+
   .sidevideo-thumbnail {
     height: 80px;
   }
+
   .Sidechannel__details h2 {
     font-size: 16px;
     margin-bottom: 5px;
   }
+
   .Sidechannel__details p {
     font-size: 12px;
   }
+
   .sidevideo__link {
     gap: 15px;
   }
 }
+
 /* MOBILE */
+
 @media (max-width: 767px) {
   .sidevideo__container {
     padding: 10px 59px 5px 10px;
   }
+
   .sidevideos__container {
     width: calc(98% - 20px);
   }
+
   .sidevideo__container video {
     width: 35%;
     height: 70px;
   }
+
   .sidevideo-thumbnail {
     height: 70px;
   }
+
   .Sidechannel__details h2 {
     font-size: 14px;
     margin-bottom: 3px;
   }
+
   .Sidechannel__details p {
     font-size: 10px;
   }
+
   /* .sidevideo__link {
     flex-direction: row;
   } */
-}/*# sourceMappingURL=sidevideo.css.map */
+}

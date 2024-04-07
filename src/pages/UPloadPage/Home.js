@@ -4,7 +4,7 @@ import MainVideo from "../../components/MainVideo/MainVideo.js";
 import VideoDetails from "../../components/VideoDetails/VideoDetails.js";
 import SideVideo from "../../components/SideVideo/SideVideo.js";
 import axios from "axios";
-import "./Home.css";
+import "./Home.scss";
 
 //const baseUrl = "http://localhost:8083/videos";
 //const baseUrl = "https://project-2-api.herokuapp.com/";

@@ -3,6 +3,7 @@ import brainFlixLogo from "../../assets/images/logo/brainFlix-logo.svg";
 import { Link } from "react-router-dom";
 //import { BrowserRouter, Routes, Route } from "react-router-dom";
 import userAvatar from "../../assets/images/mohan-muruge.jpg";
+import "./Header.css";
 //import Upload from "../../pages/UPloadPage/Upload";
 
 function Navbar() {
